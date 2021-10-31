@@ -1,0 +1,10 @@
+TASK ONE
+
+vuex actions should be invoked in mounted or created vue options API
+then method should be replaced with try catch
+template should have root element encapsulating all children elements
+v-show is condition, length should be greater than something
+css class name should be written in kebab case or snake case it should not be mixed
+do not apply vue template methods directly on root component element 
+it is bad practice to use v-if and v-for on the same element
+item-data="item" should be appended with ":" it needs to be binded, and it should not contain dash in name
