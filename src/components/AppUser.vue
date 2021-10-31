@@ -36,40 +36,5 @@ export default {
 }
 </script>
 
-<style scoped>
-.user{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.user img{
-    width: 74px;
-    height: 74px;
-    position: static;
-    margin-right: 16px;
-}
-
-.user p{
-    height: 18px;
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-    color: #303133; 
-}
-
-.user_bottom_line{
-    border: 1px solid #EAEAEA;
-    margin: 13px 14px 12px 0px;
-}
-
-[active=true] p{
-    color: #06A9F6;
-}
-
-[active=true] img{
-    filter: brightness(50%);
-}
+<style scoped src="@/styles/main.css">
 </style>

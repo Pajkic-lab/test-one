@@ -21,22 +21,27 @@ export default new Vuex.Store({
             state.params.page = pageNum
             state.usersList = []
             state.isLoading = true
+        },
+        setUsersList: (state, payload) => {
+            state.usersList = payload
+            state.isLoading = false
+        },
+        setErrorMsg: (state, payload) => {
+            state.errorMessage = payload.message
+            state.isLoading = false
         }
     },
     actions: {
-        retriveData: async ({ state }) => {
+        retriveData: async ({ commit, state }) => {
             try {
                 const { data } = await api.getListUsersData(state.params)
-                state.usersList = data
-                state.isLoading = false
+                commit('setUsersList', data)
             } catch (err) {
-                state.errorMessage = err.message
-                state.isLoading = false
+                commit('setUsersList', err)
             }
         }
     },
     getters: {
-        getByKey: state => key => state[key],
         getErrorMessage : state => state.errorMessage ,
         getIsLoading : state => state.isLoading,
         getUsersList : state => state.usersList,
