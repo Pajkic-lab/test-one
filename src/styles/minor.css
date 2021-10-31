@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 28px);
+    min-height: calc(100vh - 100px);
     width: 100%;
   }
 .error_container h1{

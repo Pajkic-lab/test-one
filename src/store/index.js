@@ -37,7 +37,7 @@ export default new Vuex.Store({
                 const { data } = await api.getListUsersData(state.params)
                 commit('setUsersList', data)
             } catch (err) {
-                commit('setUsersList', err)
+                commit('setErrorMsg', err)
             }
         }
     },
